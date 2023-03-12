@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signin.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="back_ground">
+        <div class="nav_bar">
+            <div class="u_name" id="u_name"></div>
+            <div class="u_circle"></div>
+        </div>
+        <div class="login_form">
+            <div class="pro_pic"></div>
+            <h2><span  id="name"></span></h2>
+            <h2><span id="e_mail"></span></h2>
+            <label for="text">User name :</label><br>
+            <input type="text" id="user_name" name="user_name" /><br>
+            <label for="password">password :</label><br>
+            <input type="password" id="password" name="password"  /><br>
+            <div class="create_button" >Create</div>
+        </div>
+    </div>
+    <script>
+
+        const user_detail=[];  
+        user_detail[0]="anurada";   //user name
+        user_detail[1]=12345;       //password
+        user_detail[2]="anurada123@gmail.com"; //emailaddress
+
+
+        document.getElementById("u_name").innerText = user_detail[0];
+        document.getElementById("name").innerText = user_detail[0];
+        document.getElementById("e_mail").innerText = user_detail[2];
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signin.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="back_ground">
+        <div class="nav_bar">
+            <button class="sign_in">Signin</button>
+        </div>
+        <div class="login_form">
+            <h1>Login</h1>
+            <label for="text">User name</label><br>
+            <input type="text" id="user_name" name="user_name" /><br>
+            <label for="password">password</label><br>
+            <input type="password" id="password" name="password"  /><br>
+            <button class="log_bttn" onclick="loggin()">Login</button>
+            <h3 class="message1"><span id="message1"></span></h3>
+            <h3 class="message2"><span id="message2"></span></h3>
+        </div>
+    </div>
+    <script>
+
+        function loggin(){
+
+            const user_detail=[];  
+            user_detail[0]="anurada";   //user name
+            user_detail[1]=12345;      //password
+
+            const name = document.getElementById("user_name").value;
+            const p_word = document.getElementById("password").value;
+
+            console.table([name,p_word])
+            console.table([user_detail[0],user_detail[1]]);
+
+            if (name == user_detail[0] && p_word == user_detail[1]){
+                document.getElementById("message1").innerText = "Logging Success!";
+            }else{
+                document.getElementById("message2").innerText = "fail";
+            }
+    
+        }
+
+    </script>
+</body>
+</html>
